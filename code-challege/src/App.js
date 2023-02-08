@@ -24,20 +24,6 @@ const data = [
     ],
   },
 ];
-const Transaction = ({ transaction }) => {
-  let points = 0;
-  if (transaction.amount > 100) {
-    points += 2 * (transaction.amount - 100);
-  }
-  if (transaction.amount > 50 && transaction.amount <= 100) {
-    points += 1 * (transaction.amount - 50);
-  }
-  return (
-    <p>
-      {transaction.month}: {points} points
-    </p>
-  );
-};
 
 const Customer = ({ customer }) => {
   const [pointsByMonth, setPointsByMonth] = useState({});
